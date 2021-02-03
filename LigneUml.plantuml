@@ -1,0 +1,15 @@
+@startuml
+
+class Ligne {
+  Point a
+  Point b
+}
+
+class Ligne {
+  float x
+  float y
+}
+
+Ligne - Point
+
+@enduml
