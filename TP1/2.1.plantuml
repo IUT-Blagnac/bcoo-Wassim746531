@@ -26,7 +26,6 @@ Cour -left- "1" Enseignant
 class Exam{
   date
   coefficient
-  cour
   }
 
 class Note {
@@ -34,7 +33,7 @@ class Note {
   }
 
 Etudiant "1..*" -- "0..*" Cour
-Cour "1..*" -- "1" Exam
+Cour "1" -- Exam
 Etudiant "1..*" -- "0..*" Exam
 (Etudiant, Exam) . Note
 
