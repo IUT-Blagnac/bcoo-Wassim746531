@@ -1,0 +1,30 @@
+@startuml
+
+hide circle
+hide empty attributes
+hide empty methods
+
+class Portable{
+  prix
+  valeurActuelle
+  }
+
+class Clavier{
+  touches
+  }
+
+class Type{
+  azerty
+  qwerty
+  }
+
+class P as "Proprio"{
+  nom
+  prenom
+}
+
+Clavier "1" -- "1" Portable
+Clavier -up- Type
+Portable "0..1" -- "0..1" P
+
+@enduml
