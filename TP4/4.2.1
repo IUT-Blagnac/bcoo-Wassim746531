@@ -1,0 +1,29 @@
+@startuml
+
+hide circle
+hide empty attributes
+hide empty methods
+
+actor Enseignant
+actor Etudiant
+
+usecase rs as (Reservation\n des salles de cours)
+usecase rmp as (Reservation\n du materiel pedagogique)
+usecase r as (Reservation)
+
+
+usecase p as (Editer Recapitulatif\n Horraire)
+usecase pe as (Consulter Planing Horraire)
+usecase recap as (Consulter Recapitulatif\n Horraire)
+
+Enseignant -> r
+Enseignant -> pe
+Enseignant -> recap
+Enseignant <|-- EnseignantResponsable 
+EnseignantResponsable --> p
+Etudiant -> pe
+
+r <|-- rs
+r <|-- rmp
+
+@enduml
