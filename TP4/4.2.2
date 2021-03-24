@@ -1,0 +1,22 @@
+@startuml
+
+hide circle
+hide empty attributes
+hide empty methods
+
+actor Client
+
+usecase r as (Demander Rensaignement)
+usecase e as (Proceder\n a des Essais)
+usecase a as (Prendre Article)
+usecase c as (Passer a la caisse)
+usecase o as (Obtenir Reduction)
+
+Client -> r
+Client -> e
+Client -> a
+Client -> c
+
+c <|-- o
+
+@enduml
