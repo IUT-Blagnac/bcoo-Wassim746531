@@ -1,0 +1,29 @@
+@startuml
+
+hide circle
+hide empty attributes
+hide empty methods
+
+actor Enseignant
+actor Etudiant
+
+rectangle "Reservation Calcul"{
+  usecase rs as (Reservation\n des salles de cours)
+  usecase rmp as (Reservation\n du materiel pedagogique)
+  usecase r as (Reservation)
+  }
+
+usecase p as (Modification Plannig)
+usecase pe as (Consulter Planing Horraire)
+usecase recap as (Recapitulatif\n Horraire)
+
+Enseignant -> r
+Enseignant -> pe
+Enseignant -> recap
+Enseignant ..> p : <Responsable>
+Etudiant -> pe
+
+r <|-- rs
+r <|-- rmp
+
+@enduml
