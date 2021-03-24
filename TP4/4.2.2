@@ -22,7 +22,9 @@ Client -> c
 
 c <|-- o
 }
-usecase ar as (Posseder Argent \n -liquide ou pas-)
+usecase ar as (Posseder Argent)
+usecase pl as (Payer en Liquide ou Pas)
 ar -> Client
+ar <|-- pl
 
 @enduml
