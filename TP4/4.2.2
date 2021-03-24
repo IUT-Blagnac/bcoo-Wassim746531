@@ -8,11 +8,13 @@ rectangle "Processus de Vente"{
 actor Client
 
 usecase r as (Demander Rensaignement)
+usecase ra as (Passer dans rayon)
 usecase e as (Proceder\n a des Essais)
 usecase a as (Prendre Article)
 usecase c as (Passer a la caisse)
 usecase o as (Obtenir Reduction)
 
+Client -> ra
 Client -> r
 Client -> e
 Client -> a
